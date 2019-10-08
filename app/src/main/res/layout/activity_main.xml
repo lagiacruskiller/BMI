@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/weightinput"
         style="@android:style/Widget.DeviceDefault.AutoCompleteTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -18,10 +18,10 @@
         android:hint="Weight"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/heightinput" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/maindisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
@@ -33,7 +33,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/heightinput"
         style="@android:style/Widget.DeviceDefault.AutoCompleteTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -44,48 +44,64 @@
         android:hint="Height"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/maindisplay" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/calcbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="136dp"
-        android:layout_marginEnd="172dp"
+        android:layout_marginStart="188dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="188dp"
         android:text="Calculate"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heightinput" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/displaybmi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="184dp"
+        android:layout_marginStart="188dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="188dp"
         android:text="BMI value"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calcbutton" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/weightimg"
         android:layout_width="41dp"
         android:layout_height="42dp"
         android:layout_marginTop="188dp"
         android:layout_marginEnd="28dp"
-        app:layout_constraintEnd_toStartOf="@+id/editText2"
+        app:layout_constraintEnd_toStartOf="@+id/weightinput"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/weight" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/heightimg"
         android:layout_width="42dp"
         android:layout_height="40dp"
         android:layout_marginTop="128dp"
         android:layout_marginEnd="28dp"
-        app:layout_constraintEnd_toStartOf="@+id/editText"
+        app:layout_constraintEnd_toStartOf="@+id/heightinput"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/height" />
+
+    <TextView
+        android:id="@+id/conditionid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="188dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="188dp"
+        android:text="Degree of BMI"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/displaybmi" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
